@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #ffd6e8, #ffeaf4);
+  overflow-x: hidden;
+  color: #5a2a3a;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Bokeh style background */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.imgur.com/8Km9tLL.png');
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Titles */
+.mainTitle {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Type text */
+.typeText {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Polaroid timeline */
+.photoTimeline {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transform: rotate(-2deg);
+  animation: float 4s ease-in-out infinite;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.polaroid span {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(-2deg); }
+}
+
+/* Button */
+.startBtn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ff8fb1;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bottomLine {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Chibi */
+.chibi {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 90px;
+}
