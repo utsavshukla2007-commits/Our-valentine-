@@ -6,6 +6,7 @@ body {
   color: #5a2a3a;
 }
 
+/* General screen layout */
 .screen {
   min-height: 100vh;
   display: flex;
@@ -16,71 +17,40 @@ body {
   padding: 30px;
 }
 
+/* Hide sections */
 .hidden {
   display: none;
 }
 
-/* Bokeh style background */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url('https://i.imgur.com/8Km9tLL.png');
-  opacity: 0.15;
-  z-index: -1;
-}
-
-/* Titles */
+/* Title styling */
 .mainTitle {
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 20px;
 }
 
-/* Type text */
+/* Typewriter text */
 .typeText {
-  max-width: 600px;
+  max-width: 650px;
   font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  line-height: 1.7;
+  margin-top: 20px;
 }
 
-/* Polaroid timeline */
-.photoTimeline {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 20px;
+/* Countdown */
+#countdown {
+  font-size: 28px;
+  margin-top: 15px;
+  color: #ff4f8b;
 }
 
-.polaroid {
-  background: white;
-  padding: 10px;
-  width: 180px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  transform: rotate(-2deg);
-  animation: float 4s ease-in-out infinite;
+/* Bottom line */
+.bottomLine {
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.polaroid img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.polaroid span {
-  display: block;
-  margin-top: 8px;
-  font-size: 13px;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px) rotate(-2deg); }
-  50% { transform: translateY(-8px) rotate(-2deg); }
-  100% { transform: translateY(0px) rotate(-2deg); }
-}
-
-/* Button */
+/* Button (used later) */
 .startBtn {
   margin-top: 30px;
   padding: 12px 25px;
@@ -92,15 +62,9 @@ body::before {
   cursor: pointer;
 }
 
-.bottomLine {
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-/* Chibi */
-.chibi {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 90px;
+/* Soft floating animation (used later for photos) */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
